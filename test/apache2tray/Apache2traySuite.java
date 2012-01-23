@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({apache2tray.TrayHandlerTest.class, apache2tray.images.ImagesSuite.class, apache2tray.ConsoleHandlerTest.class, apache2tray.Apache2trayTest.class})
+@Suite.SuiteClasses({apache2tray.TrayHandlerTest.class, apache2tray.ConsoleHandlerTest.class, apache2tray.Apache2trayTest.class})
 public class Apache2traySuite {
 
     @BeforeClass
