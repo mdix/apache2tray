@@ -1,0 +1,5 @@
+- start/stop apache via tray menu (gksu or something)
+- add exit button to tray icon
+- when the tray image is updated, it flickers a bit - this shouldn't happen
+- get a better tray icon (the feather looks really silly on my xfce panel with a height of 17px)
+- add more unittests

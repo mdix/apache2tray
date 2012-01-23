@@ -1,0 +1,5 @@
+Shows the colored apache feather in your traybar if apache httpd is running, else it shows a gray feather.
+
+Note: I'm a complete Java n00b and apache2tray is my first Java project. If you like the idea of apache2tray I'd be really grateful if you'd participate and show me how to do it the right way. :)
+
+Please look at TODO to learn about my ideas.
