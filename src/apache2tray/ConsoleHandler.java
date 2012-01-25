@@ -1,15 +1,17 @@
 package apache2tray;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ConsoleHandler {
     private String[] command = { "/bin/sh", "-c", "ps -eaf | grep httpd | grep -v grep | wc -l" };
-    private Runtime  shell;
+    private Runtime  shell   = Runtime.getRuntime();
     
     public ConsoleHandler() {
-        this.shell = Runtime.getRuntime();
+
     }
-    
+
     public Boolean getApacheStatus() {
         try {
             Process pr = this.shell.exec(this.command);
