@@ -7,15 +7,15 @@ import java.awt.TrayIcon;
 import java.awt.AWTException;
 
 public class TrayHandler {
-    private Image[] statusImages = new Image[2];
-    private TrayIcon trayicon;
+    private Image[]    statusImages = new Image[2];
+    private TrayIcon   trayicon;
     private SystemTray systemtray;
     
     public TrayHandler() {
         this.statusImages[0] = Toolkit.getDefaultToolkit().getImage("src/apache2tray/images/active.png");
         this.statusImages[1] = Toolkit.getDefaultToolkit().getImage("src/apache2tray/images/inactive.png");
         
-        this.systemtray  = SystemTray.getSystemTray();
+        this.systemtray      = SystemTray.getSystemTray();
     }
     
     public void setTrayIcon(Boolean state) {

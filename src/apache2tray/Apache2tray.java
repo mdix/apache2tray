@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Apache2tray {
     public static void main(String[] args) {
-        final TrayHandler trayhandler       = new TrayHandler();
+        final TrayHandler    trayhandler    = new TrayHandler();
         final ConsoleHandler consolehandler = new ConsoleHandler();
         Timer timer = new Timer();
                 

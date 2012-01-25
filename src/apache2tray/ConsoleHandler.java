@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ConsoleHandler {
     private String[] command = { "/bin/sh", "-c", "ps -eaf | grep httpd | grep -v grep | wc -l" };
-    private Runtime  shell   = null;
+    private Runtime  shell;
     
     public ConsoleHandler() {
         this.shell = Runtime.getRuntime();
