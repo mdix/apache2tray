@@ -1,4 +1,3 @@
 - start/stop apache via tray menu (gksu or something)
-- add exit button to tray icon
 - get a better tray icon (the feather looks really silly on my xfce panel with a height of 17px)
 - add more unittests
