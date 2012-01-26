@@ -65,5 +65,4 @@ public class TrayHandler {
         
         this.lastState = state;
     }
-
 }
