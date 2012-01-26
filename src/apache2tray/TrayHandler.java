@@ -15,14 +15,6 @@ public class TrayHandler {
      */
     private Boolean    lastState;
     
-    ActionListener exitListener = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("Exiting...");
-            System.exit(0);
-        }
-    };
-    
     /**
      * Adds the status Images to the statusImages array, the status text and gets the system tray.
      */
@@ -82,12 +74,21 @@ public class TrayHandler {
     }
     
     /**
-     * Adds the menu items (currently only an exit button).
+     * Adds the menu items (currently only an exit button) and attaches action
+     * listeners to them.
      */
     private void addMenuItems() {
         PopupMenu popup      = new PopupMenu();
         MenuItem defaultItem = new MenuItem("Exit");
-        defaultItem.addActionListener(exitListener);
+        
+        defaultItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Exiting...");
+                System.exit(0);
+            }
+        });
+        
         popup.add(defaultItem);
         
         this.trayicon.setPopupMenu(popup);
