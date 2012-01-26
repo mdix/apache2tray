@@ -55,6 +55,8 @@ public class TrayHandler {
             this.addMenuItems();
         } catch (AWTException e) {
             System.err.println("TrayIcon could not be added.");
+            System.out.println("Exiting...");
+            System.exit(0);
         }
     }
     
