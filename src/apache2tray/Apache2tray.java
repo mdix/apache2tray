@@ -12,7 +12,8 @@ public class Apache2tray {
         Boolean apacheStatus = consolehandler.getApacheStatus();
         trayhandler.setTrayIcon(apacheStatus);
         
-        timer.scheduleAtFixedRate(new TimerTask() {            
+        timer.scheduleAtFixedRate(new TimerTask() {   
+            @Override
             public void run() {
                 Boolean apacheStatus = consolehandler.getApacheStatus();
                 trayhandler.updateTrayIcon(apacheStatus);
