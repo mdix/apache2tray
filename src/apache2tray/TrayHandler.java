@@ -25,7 +25,7 @@ public class TrayHandler {
         this.statusText[0] = "Apache is running";
         this.statusText[1] = "Apache is not running";
         
-        this.systemtray      = SystemTray.getSystemTray();
+        this.systemtray = SystemTray.getSystemTray();
     }
     
     /**
