@@ -9,6 +9,7 @@ public class TrayHandler {
     private String[]   statusText   = new String[2];
     private TrayIcon   trayicon;
     private SystemTray systemtray;
+    private PopupMenu  popupmenu    = new PopupMenu();
     /**
      * The state of apache when last calling updateTrayIcon(). Used to 
      * prevent a periodical update of the tray icon with the same image.
@@ -55,7 +56,7 @@ public class TrayHandler {
     /**
      * Checks if the state of Apache has changed since the last time this function
      * was called and if so updates the Apache icon & status text. 
-     * @param state Weather Apache is running (true) or not (false) 
+     * @param state Apache is running (true) or not (false) 
      */
     public void updateTrayIcon(Boolean state) {
         if (lastState == state) {
@@ -78,10 +79,9 @@ public class TrayHandler {
      * listeners to them.
      */
     private void addMenuItems() {
-        PopupMenu popup      = new PopupMenu();
-        MenuItem defaultItem = new MenuItem("Exit");
+        MenuItem  exitItem = new MenuItem("Exit");
         
-        defaultItem.addActionListener(new ActionListener() {
+        exitItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Exiting...");
@@ -89,8 +89,7 @@ public class TrayHandler {
             }
         });
         
-        popup.add(defaultItem);
-        
-        this.trayicon.setPopupMenu(popup);
+        this.popupmenu.add(exitItem);  
+        this.trayicon.setPopupMenu(this.popupmenu);
     }
 }
